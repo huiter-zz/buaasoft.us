@@ -1,0 +1,41 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Api_model extends CI_Model 
+{
+
+    function __construct()
+    {
+        parent::__construct();
+    }
+
+    function get_entrys()
+    {
+        $this->db->select('*');
+        $this->db->from('qin_cards');
+        $this->db->join('item','item.num_iid = qin_cards.num_iid');
+        $this->db->order_by('pub_time','desc');
+        $this->db->limit('100');
+
+        $query = $this->db->get();
+        $data =  $query->result_array();
+
+        return $data;
+    }
+    function get_mylike_byuid($uid)
+    {
+        $this->db->select('*');
+        $this->db->from('qin_cards');
+        $this->db->where('user_id',$uid);
+        $this->db->join('item','item.num_iid = qin_cards.num_iid');
+        $this->db->order_by('pub_time','desc');
+        $this->db->limit('100');
+        $query = $this->db->get();
+        $data =  $query->result_array();
+
+        return $data;
+
+    }
+}
+
+/* End of data_model.php */
+/* Location: ./system/application/model/data_model.php */

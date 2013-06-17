@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/guokuitem/!svn/ver/1/1/system/database/drivers/oci8
+END
+oci8_driver.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/guokuitem/!svn/ver/1/1/system/database/drivers/oci8/oci8_driver.php
+END
+oci8_result.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/guokuitem/!svn/ver/1/1/system/database/drivers/oci8/oci8_result.php
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/guokuitem/!svn/ver/1/1/system/database/drivers/oci8/index.html
+END
+oci8_forge.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/guokuitem/!svn/ver/1/1/system/database/drivers/oci8/oci8_forge.php
+END
+oci8_utility.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/guokuitem/!svn/ver/1/1/system/database/drivers/oci8/oci8_utility.php
+END

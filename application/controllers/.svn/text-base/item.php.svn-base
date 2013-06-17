@@ -1,0 +1,61 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+/**
+ * 引用流程接入口 
+ */
+class item extends Guoku_Controller
+{		
+	public function __construct()
+	{
+		parent::__construct();		
+	}
+	
+	public function index($id='0')
+	{	
+		if(!$this->session->userdata('user'))
+		redirect(base_url('/'));
+		if($id <0)
+		{
+			$id = 0;
+		}
+		$this->load->model('data_model','',TRUE);
+		$num = $this->data_model->get_entrysnum();
+		$data = $this->data_model->get_entry($id);
+
+		$itemtags= $this->data_model->get_tags($data['num_iid']);
+		if (!empty($itemtags))
+		{
+		$addtags = explode(";",$itemtags['tags']);
+		$tags = $itemtags['tags'];
+		}
+		else 
+		{
+			$tags = '';
+			$addtags=array();
+		}
+		$this->curl->create("http://guanjianzi.sinaapp.com/api/v1/keywords/?content=".rawurlencode($data['title']));
+
+        $keywords = json_decode($this->curl->execute(),TRUE);
+		$data['before'] = $id-1;
+		$data['next'] = $id+1;
+		$data['num'] = $num['num'];
+		$data['id'] = $id;
+		$data['progress'] = ($id*100)/ $num['num'];
+		$data['tags'] = $keywords;
+		$data['addtags'] = $addtags;
+		$data['itemtags'] = $tags;
+
+		$this->template['data'] = $data;
+
+		$this->template['css'] = $this->load->view('item/css',$this->template,TRUE);
+		$this->template['content'] = $this->load->view('item/content',$this->template,TRUE);
+		$this->template['js'] = $this->load->view('item/js',$this->template,TRUE);
+
+		
+		$this->load->view('template_view',$this->template);
+
+	}
+}
+
+/* End of file explore.php */
+/* Location: ./application/controllers/explore.php */

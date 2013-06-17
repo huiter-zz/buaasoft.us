@@ -1,0 +1,54 @@
+<h1 style="text-align:center;"><small>果小裤的第<?php echo $data['id'];?>号商品</small><span id="id"style="display:none;"><?php echo $data['num_iid'];?></span></h1>
+<div class="row">
+	<div class="progress progress-striped active span12">
+        <div class="bar" style="width:<?php echo $data['progress'];?>%;"></div>
+    </div>
+</div>
+<div class="row">
+	<div class="pull-left" style="margin-top:160px">
+		<a id="before" class="btn btn-large" href="/item/<?php echo $data['before'];?>"><i class="icon-chevron-left"></i></a>
+	</div>
+	<div class="span4 thumbnail offset1" style="min-height:300px;">
+		<a href="<?php echo $data['url'];?>" target="_blank"> 
+			<img src= <?php echo $data['img_url'];?>>
+		</a>
+	</div>
+	<div class="span5">
+		<blockquote>
+          <p><?php echo $data['title'];?></p>
+        </blockquote>
+        
+        <div class="caption">
+            <?php foreach ($data['tags'] as $key => $tag):?>         
+            <a class="tag" href="#">
+            	<?php if(!($tag['word']==' ')):?>
+                <span class="label label-info "><?php echo $tag['word'];?></span>
+                <?php endif;?>
+            </a>
+        	<?php endforeach;?>
+        </div>
+	<hr>
+		  <div class="input-append">
+		    <input id="tagsinput" type="text" class="span4" value="<?php echo $data['itemtags'];?>">
+		    <button id="submit" type="submit" class="btn">提交</button>
+		  </div>
+	<hr>
+	<h3>已添加的标签：</h3>
+	    <div class="caption">
+            <i class="icon-tag"></i>
+            <?php if(!empty($data['addtags'])):?>
+            <?php foreach ($data['addtags'] as $key => $tag):?>         
+            <a class="addtag" href="#">
+            	<?php if(!($tag=='')):?>
+                <span class="label label-important"><?php echo $tag;?></span>
+                <?php endif;?>
+            </a>
+        	<?php endforeach;?>
+        	<?php endif;?>
+        </div>		
+
+	</div>
+	<div class="pull-right" style="margin-top:160px">
+		<a id="next" class="btn btn-large" href="/item/<?php echo $data['next'];?>"><i class="icon-chevron-right"></i></a>
+	</div>
+</div>

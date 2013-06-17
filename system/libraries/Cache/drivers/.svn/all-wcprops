@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/guokuitem/!svn/ver/1/1/system/libraries/Cache/drivers
+END
+Cache_memcached.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/guokuitem/!svn/ver/1/1/system/libraries/Cache/drivers/Cache_memcached.php
+END
+Cache_dummy.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/guokuitem/!svn/ver/1/1/system/libraries/Cache/drivers/Cache_dummy.php
+END
+Cache_file.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/guokuitem/!svn/ver/1/1/system/libraries/Cache/drivers/Cache_file.php
+END
+Cache_apc.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/guokuitem/!svn/ver/1/1/system/libraries/Cache/drivers/Cache_apc.php
+END

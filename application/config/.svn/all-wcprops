@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/guokuitem/!svn/ver/5/1/application/config
+END
+pagination.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/guokuitem/!svn/ver/1/1/application/config/pagination.php
+END
+doctypes.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/guokuitem/!svn/ver/1/1/application/config/doctypes.php
+END
+database.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/guokuitem/!svn/ver/2/1/application/config/database.php
+END
+config.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/guokuitem/!svn/ver/5/1/application/config/config.php
+END
+autoload.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/guokuitem/!svn/ver/1/1/application/config/autoload.php
+END
+foreign_chars.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/guokuitem/!svn/ver/1/1/application/config/foreign_chars.php
+END
+mimes.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/guokuitem/!svn/ver/1/1/application/config/mimes.php
+END
+constants.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/guokuitem/!svn/ver/1/1/application/config/constants.php
+END
+rest.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/guokuitem/!svn/ver/1/1/application/config/rest.php
+END
+user_agents.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/guokuitem/!svn/ver/1/1/application/config/user_agents.php
+END
+routes.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/guokuitem/!svn/ver/1/1/application/config/routes.php
+END
+profiler.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/guokuitem/!svn/ver/1/1/application/config/profiler.php
+END
+hooks.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/guokuitem/!svn/ver/1/1/application/config/hooks.php
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/guokuitem/!svn/ver/1/1/application/config/index.html
+END
+database.php.sample
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/guokuitem/!svn/ver/1/1/application/config/database.php.sample
+END
+smileys.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/guokuitem/!svn/ver/1/1/application/config/smileys.php
+END
+config.php.sample
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/guokuitem/!svn/ver/1/1/application/config/config.php.sample
+END

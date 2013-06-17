@@ -1,0 +1,48 @@
+<script>
+$(document).ready(function() {
+    $(".tag").click(function() {
+    			event.preventDefault();   
+      var tag = $(this).children("span").text();
+      var raw = $('#tagsinput').attr('value');
+      if(raw.match(tag+';'))
+      {
+      	newtags = raw.replace(tag+';','');
+     $('#tagsinput').attr('value',newtags);
+      }
+      else
+      {
+      	var newtags = raw+tag+';';
+      }
+
+      $('#tagsinput').attr('value',newtags);
+    });
+
+    $(".addtag").click(function() {
+      event.preventDefault();   
+      //var tag = $(this).children("span").text();
+      //var raw = $('#tagsinput').attr('value');
+      //var newtags = raw.replace(tag+';','');
+      //$('#tagsinput').attr('value',newtags);
+    });
+
+     $("#submit").click(function() {
+	     var tags = $('#tagsinput').attr('value');
+	     var id = $('#id').text();
+		event.preventDefault();     
+		$.post("/api/v1/itemtags",{id:id,tags:tags},function( data ) {
+	  	 window.location.reload();
+	  	},"json")
+    });
+
+     onkeydown = function(event){
+     		if(event.keyCode == 37)
+			{
+			  window.location.href= $('#before').attr('href');
+			}
+			if(event.keyCode == 39)
+			{
+			  window.location.href= $('#next').attr('href');
+			}
+		}
+});
+</script>

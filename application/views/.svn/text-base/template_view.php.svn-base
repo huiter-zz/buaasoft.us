@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+            <title>果库小工具，huiter</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="果库小工具">
+            <meta name="author" content="huiter">
+            <!-- Le styles -->
+            <link href="http://storage.aliyun.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">    
+            <link rel="icon" type="image/png" href="http://static.guoku.com/static/images/guoku_favicon.png">
+            <style type="text/css">
+            body{
+            padding-top:60px;
+            }
+            </style>
+            <?php if ( isset ($css) && ! empty($css)): ?>
+                <?php print $css;?>
+            <?php endif ?> 
+
+            <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+            <!-- Le fav and touch icons -->         
+            <link rel="icon" type="image/png" href="http://static.guoku.com/static/images/guoku_favicon.png">
+    </head>
+
+    <body>
+            <div class="navbar navbar-fixed-top">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" style="padding:7px 20px;"> <img src="http://static.guoku.com/static/images/guoku_logo.gif" height="20" alt="Logo"> </a>
+                  <div class="nav-collapse">
+                    <ul class="nav pull-right">
+                      <li class="divider-vertical"></li>
+                      <?php if($this->session->userdata('user')):?>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">果库<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li class="divider"></li>
+                          <li><a href="/quit">退出</a></li>
+                        </ul>
+                      </li>
+                       <?php endif;?>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div>
+
+    
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+        <?php $message=$this->session->flashdata('message');?>
+        <?php if ( isset ($message) && ! empty($message)): ?>
+		     <?php /*处理消息提示*/echo $message;?>
+        <?php endif;?>
+
+        <?php if ( isset ($content) && ! empty($content)): ?>
+            <?php print $content; ?>
+        <?php endif ?>
+
+        <div id="backtop" style="left: auto; right: 30px; position: fixed; top: auto; bottom: 30px; z-index: 99999999; overflow: hidden; ">
+            <a href="#" title="返回顶部" style="margin-left: 3px; background-image: url(http://img.ujian.cc/style/1.png); background-attachment: scroll; background-color: transparent; display: block; float: right; outline-width: 0px; outline-style: none; text-indent: -9999em; width: 32px; height: 32px; background-position: -64px 0px; background-repeat: no-repeat no-repeat; ">返回顶部</a>
+        </div>
+    <hr>
+    <footer class="footer well" >
+        <p >Copyright &copy;2012 guoku, All Rights Reserved.</p>
+    </footer>   
+    </div> 
+        <script src="http://storage.aliyun.com/bootstrap/js/jquery.js"></script>
+        <script src="http://storage.aliyun.com/bootstrap/js/bootstrap.min.js"></script> 
+        <script src="http://storage.aliyun.com/bootstrap/js/application.js"></script>  
+       <?php if ( isset ($js) && ! empty($js)): ?>
+            <?php print $js;?>
+        <?php endif ?>  
+    </body>
+</html>

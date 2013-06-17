@@ -1,0 +1,60 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Data_model extends CI_Model 
+{
+
+    function __construct()
+    {
+        parent::__construct();
+    }
+    //用户数
+    function get_entry($id)
+    {
+        $this->db->select('*');
+        $this->db->from('item');
+        $this->db->limit('1',$id);
+        $query = $this->db->get();
+        $data =  $query->row_array();
+
+        return $data;
+    }
+    function get_entrysnum()
+    {
+        $this->db->select('count(*) as num');
+        $this->db->from('item');
+        $query = $this->db->get();
+        $data =  $query->row_array();
+        return $data;
+    }
+    function insert($data)
+    {
+        $this->db->insert('item_tags',$data);
+    }
+    function update($data)
+    {
+        $this->db->where('id', $data['id']);
+        $this->db->update('item_tags', $data);
+    }
+    function get_tags($id)
+    {
+        $this->db->select('*');
+        $this->db->from('item_tags');
+        $this->db->where('id',$id);
+        $query = $this->db->get();
+        $data =  $query->row_array();
+        return $data;
+    }
+    function get_entrybykeyword($keyword)
+    {
+        $this->db->select('*');
+        $this->db->from('item');
+        $this->db->like('title',$keyword,'both');
+        $query = $this->db->get();
+        $data =  $query->result_array();
+
+        return $data;
+    }
+}
+
+/* End of data_model.php */
+/* Location: ./system/application/model/data_model.php */

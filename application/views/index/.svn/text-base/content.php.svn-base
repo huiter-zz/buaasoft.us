@@ -1,0 +1,19 @@
+
+<header>
+		<div class="row">
+			<div class="span6 offset5">
+				<div class="thumbnail span1"><img src="http://tp4.sinaimg.cn/2179686555/180/5605610866/0"></div>
+			</div>
+			<h1><small style="padding-left:360px;">果小裤的商品分类整理。</small></h1>
+		</div>
+		<hr>
+</header>
+  <div class="row">
+    <div class="span6 offset3">
+      <form class="form-inline well" method="post" action="/login">
+        <input type="email" class="span2" name="email" placeholder="Email" id="email">
+        <input type="password" class="span2" name="password" placeholder="Password" id="password">
+        <button type="submit" class="btn" id="login">登录</button>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+/**
+ * 引用流程接入口 
+ */
+class Login extends Guoku_Controller
+{		
+	public function __construct()
+	{
+		parent::__construct();		
+	}
+	
+	public function index()
+	{	
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		if(($email=='i@guoku.com')&&($password=="guoku123"))
+		{
+			$this->session->set_userdata('user','Login');
+			redirect(base_url('/item'));
+		}
+		else 
+		{
+			redirect(base_url('/'));
+		}
+	}
+}
+
+/* End of file explore.php */
+/* Location: ./application/controllers/explore.php */

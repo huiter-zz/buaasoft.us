@@ -1,0 +1,10 @@
+<style type="text/css">
+.thumbnail .caption {
+padding: 9px;
+}
+.tag {
+text-decoration: none;
+display: inline-block;
+margin: 0px 1px 7px 1px;
+}
+</style>
