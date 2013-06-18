@@ -4,7 +4,7 @@
  * 引用流程接入口 
  */
 
-class Weixin extends Guoku_Controller
+class Weixin extends HT_Controller
 {		
 	public function __construct()
 	{
