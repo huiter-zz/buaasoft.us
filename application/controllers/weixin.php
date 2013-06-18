@@ -53,22 +53,26 @@ class Weixin extends HT_Controller
 							</xml>";              
 				if(!empty( $keyword ))
                 {
-                	$item = $this->user_model->get_entry_byname($keyword);
-                	if(empty($item))
+                	if(substr($keyword, 0, 1 )=="@")
                 	{
-                		$contentStr = "查无此人。";
-	                	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $contentStr);
-	                	echo $resultStr;
-                	}
-                	else
-                	{
-                		$contentStr = "";
-                		$title = $item['name'];
-                		$discription = "所在地".$item['location']."工作".$item['job']."手机".$item['mobile'];
-                		$picUrl = $item['img_url'];
-                		$url = $item['url'];
-                		$resultStr = sprintf($textTplWithImg, $fromUsername, $toUsername, $time, $contentStr,$title,$discription,$picUrl,$url);
-	                	echo $resultStr;
+                		$keyword = substr($keyword, 1);
+	                	$item = $this->user_model->get_entry_byname($keyword);
+	                	if(empty($item))
+	                	{
+	                		$contentStr = "查无此人。";
+		                	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $contentStr);
+		                	echo $resultStr;
+	                	}
+	                	else
+	                	{
+	                		$contentStr = "";
+	                		$title = $item['name'];
+	                		$discription = "所在地:".$item['location']."\n工作:".$item['job']."\n手机:".$item['mobile'];
+	                		$picUrl = $item['img_url'];
+	                		$url = $item['url'];
+	                		$resultStr = sprintf($textTplWithImg, $fromUsername, $toUsername, $time, $contentStr,$title,$discription,$picUrl,$url);
+		                	echo $resultStr;
+	                	}
                 	}
              
                 }else{
