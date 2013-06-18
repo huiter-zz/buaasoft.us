@@ -1,4 +1,12 @@
 <div class="row">
+	<div class="span2">
+    	<a href="#" class="thumbnail"><img  style="width: 200px; height: 140px; " src="/assets/img/qrcode.jpg"> </a>
+	</div>
+	<div class="span8">
+		<h3>扫描左侧二维码，加buaa921为好友。对话输入如<code>@杨帆</code>即可获得杨帆同志最新的联系方式。</h3>
+	</div>
+</div>
+<div class="row">
 <div class="span2">
     <a href="#" class="thumbnail"><img  style="width: 200px; height: 140px; " src=""> </a>
 </div>
@@ -34,8 +42,5 @@
 	        <a class="btn" target="_blank" href="http://user.qzone.qq.com/<?php echo $data['bind_qq'];?>"><i class="icon-qzone"></i></a>
 	    <?php endif;?> 
 	</div>
-</div>
-<div class="span2">
-    <a href="#" class="thumbnail"><img  style="width: 200px; height: 140px; " src="/assets/img/qrcode.png"> </a>
 </div>
 </div>
