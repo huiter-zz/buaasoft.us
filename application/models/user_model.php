@@ -24,6 +24,14 @@ class User_model extends CI_Model
         $query = $this->db->get();
         return $query->row_array();
     }
+    function get_entity_byname($name)
+    {
+            $this->db->select('*');
+            $this->db->from('user');
+            $this->db->where('name', $name);
+            $query = $this->db->get();
+            return $query->row_array();
+    }
 
     function update($user_id,$data)
     {
