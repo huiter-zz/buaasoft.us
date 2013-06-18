@@ -53,8 +53,7 @@ class Weixin extends HT_Controller
 							</xml>";              
 				if(!empty( $keyword ))
                 {
-                	$item = $this->data_model->get_entry_byname($keyword);
-                	$item = $items[$num];
+                	$item = $this->user_model->get_entry_byname($keyword);
                 	if(empty($item))
                 	{
                 		$contentStr = "查无此人。";
@@ -64,8 +63,8 @@ class Weixin extends HT_Controller
                 	else
                 	{
                 		$contentStr = "";
-                		$title = '';
-                		$discription = $item['title'];
+                		$title = $item['name'];
+                		$discription = "所在地".$item['location']."工作".$item['job']."手机".$item['mobile'];
                 		$picUrl = $item['img_url'];
                 		$url = $item['url'];
                 		$resultStr = sprintf($textTplWithImg, $fromUsername, $toUsername, $time, $contentStr,$title,$discription,$picUrl,$url);

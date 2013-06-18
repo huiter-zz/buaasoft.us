@@ -24,7 +24,7 @@ class User_model extends CI_Model
         $query = $this->db->get();
         return $query->row_array();
     }
-    function get_entity_byname($name)
+    function get_entry_byname($name)
     {
             $this->db->select('*');
             $this->db->from('user');
