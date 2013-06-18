@@ -51,7 +51,7 @@
                           <li><a tabindex="0" href="/home"><i class="icon-home"></i>我的</a></li>
                           <li><a tabindex="1" href="/setting"><i class="icon-pencil"></i>设置</a></li>
                           <li class="divider"></li>
-                          <li><a href="/quit"><i class="icon-frown"></i>退出</a></li>
+                          <li><a href="/quit"><i class="icon-off"></i>退出</a></li>
                         </ul>
                       </li>
                        <?php endif;?>
@@ -73,12 +73,12 @@
             <?php print $content; ?>
         <?php endif ?>
 
-        <div id="backtop" style="left: auto; right: 30px; position: fixed; top: auto; bottom: 30px; z-index: 99999999; overflow: hidden; ">
-            <a href="#" title="返回顶部"><i class="icon-plane"></i></a>
+        <div id="backtop" style="left: auto; right: 100px; position: fixed; top: auto; bottom: 30px; z-index: 99999999; overflow: hidden; ">
+            <a href="#" title="返回顶部"><i class="icon-plane" style="font-size:50px"></i></a>
         </div>
     <hr>
     <footer class="footer well" >
-        <p >Copyright &copy;2013 Huiter, All Rights Reserved.</p>
+        <p >Copyright &copy;2013 , All Rights Reserved.</p>
     </footer>   
     </div> 
         <script src="/assets/js/jquery.js"></script>

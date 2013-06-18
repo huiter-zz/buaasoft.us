@@ -24,6 +24,17 @@ class User_model extends CI_Model
         $query = $this->db->get();
         return $query->row_array();
     }
+    function select_byclass($classid)
+    {
+        if($classid)
+        {
+            $this->db->select('*');
+            $this->db->from('user');
+            $this->db->like('id', $classid,'after');
+        }
+        $query = $this->db->get();
+        return $query->result_array();
+    }
     function get_entry_byname($name)
     {
             $this->db->select('*');

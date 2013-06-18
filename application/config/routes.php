@@ -41,6 +41,7 @@
 $route['default_controller'] = "/index";
 $route['404_override'] = '';
 $route['home/(:any)'] = "home/index/$1";
+$route['avatar/(:any)'] = "avatar/index/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
