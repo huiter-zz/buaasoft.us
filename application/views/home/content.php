@@ -2,7 +2,7 @@
 <div class="span2">
     <a href="#" class="thumbnail"><img  style="width: 200px; height: 140px; " src=""> </a>
 </div>
-<div class="span10">
+<div class="span8">
 	<h1><?php echo $data['name'];?></h1>
 	<table class="table table-bordered table-striped"> 
 			<colgroup> <col class="span1"> <col class="span7"> </colgroup> 
@@ -35,11 +35,7 @@
 	    <?php endif;?> 
 	</div>
 </div>
+<div class="span2">
+    <a href="#" class="thumbnail"><img  style="width: 200px; height: 140px; " src="/assets/img/qrcode.png"> </a>
 </div>
-<div class="row" style="margin-top:10px;">
-	<div class="span12">
-		<div class="well">
-			<i class="icon-comment"></i> <code>寄语</code><?php echo $data['descripe'];?>
-		</div>
-	</div>
 </div>
