@@ -40,28 +40,11 @@
 
 $active_group = 'default';
 $active_record = TRUE;
-/*
-$db['default']['hostname'] = SAE_MYSQL_HOST_M;
-$db['default']['username'] = SAE_MYSQL_USER;
-$db['default']['password'] = SAE_MYSQL_PASS;
-$db['default']['database'] = SAE_MYSQL_DB;
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = FALSE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
-$db['default']['port'] = SAE_MYSQL_PORT;
-*/
 
-$db['default']['hostname'] = '127.0.0.1';
+
+$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'happystudy';
+$db['default']['password'] = '7EgX2bbalp';
 $db['default']['database'] = 'buaasoft';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
@@ -75,6 +58,5 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 $db['default']['port'] = 3306;
-
 /* End of file database.php */
 /* Location: ./application/config/database.php */
