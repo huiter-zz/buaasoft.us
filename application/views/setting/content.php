@@ -6,7 +6,7 @@
 		  <li><a href="#password" data-toggle="tab">重置密码</a></li>
 		</ul>
 		<div class="tab-content">
-		  	<div class="tab-pane active span6" id="social">	     
+		  	<div class="tab-pane span6" id="social">	     
 				<form method="post" action="/setting/bind">
 				  <div class="input-prepend">
 				    <span class="add-on"><i class="icon-qq"></i></span>
@@ -29,7 +29,7 @@
 				  </div>
 				</form>
 			</div>
-		 	 <div class="tab-pane span6" id="profile">		
+		 	 <div class="tab-pane active span6" id="profile">		
 				<form method="post"  action="/setting/profile">
 				  <div class="input-prepend">
 				    <span class="add-on"><i class="icon-envelope"></i></span>
